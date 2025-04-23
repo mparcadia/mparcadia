@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Sesame Street</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="center">
+        <h1>Sesame Street</h1>
+        <div id="div1">
+            <img class="carousel" src="sesame.jpg">
+            </div>
+            <a href=# onclick="DoSomething()"><img class="button" src=submit.png></a>
+            <script>
+                var display = true;
+                function DoSomething () {
+                    if(display == true) {
+                        document.getElementById("div1").innerHTML = "<h1>NO</h1>";
+                        display = false;
+                    } else {
+                        document.getElementById("div1").innerHTML = "<h1>YES</h1>";
+                        display = true;
+                    }
+                    }
+            setInterval(function( ) { timer1( ) }, 3000);
+            var count = 1;
+            function timer1( )
+            {
+            count = count + 1;
+            if (count == 5)
+            count = 1;
+            document.getElementById("div1").innerHTML = "<img class= carousel src=sesame" + count + ".jpg>";
+            }
+        </script>
+        </div>
+    </body>
+</html>
